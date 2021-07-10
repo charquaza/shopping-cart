@@ -24,7 +24,7 @@ function Item(props) {
     }
 
     return (
-        <div>
+        <>
             <img src={template.src} alt={template.name} />
             <h2>{template.name}</h2>
             <p>{template.description}</p>
@@ -46,7 +46,7 @@ function Item(props) {
                 onClick={props.addToCart} disabled={isNotNumber} 
                 data-name={template.name} data-price={template.price}
             >Add to Cart</button>
-        </div>
+        </>
     );
 }
 

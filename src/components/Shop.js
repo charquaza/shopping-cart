@@ -1,9 +1,10 @@
 import Item from "./Item";
 import template from "../template";
+import "../styles/Shop.css";
 
 function Shop(props) {
     return (
-        <main>
+        <main className="shop">
             <ul>
                 {template.map((item) => {
                     return (

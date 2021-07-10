@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import "../styles/Cart.css";
 
 function Cart(props) {
     var items = props.items;
 
     if (items.length > 0) {
         return (
-            <main>
+            <main className="cart">
                 <ul>
                     {items.map((item) => {
                         return (
@@ -14,7 +15,7 @@ function Cart(props) {
                                     onClick={props.removeItem} data-name={item.name}
                                 >×</button>
                                 <p>{item.name}</p>
-                                <p>${item.price}</p>
+                                <p className="price">${item.price}</p>
                                 <p>×</p>
                                 <input 
                                     onChange={props.changeQuantity} type="number" min="0" max="99" 
@@ -25,17 +26,19 @@ function Cart(props) {
                         );
                     })}
                 </ul>
-                <button onClick={props.clearCart}>Clear Cart</button>
-                <p>Total: ${items.reduce((sum, currItem) => {
-                    return sum + (currItem.price * currItem.quantity);
-                }, 0)}</p>
-                <button onClick={props.handleCheckout}>Checkout</button>
+                <div className="total-bar">
+                    <button onClick={props.clearCart} className="clear-cart">Clear Cart</button>
+                    <p>Total: ${items.reduce((sum, currItem) => {
+                        return sum + (currItem.price * currItem.quantity);
+                    }, 0)}</p>
+                </div>
+                <button onClick={props.handleCheckout} className="checkout">Checkout</button>
             </main>
         );
     }
 
     return (
-        <main>
+        <main className="cart">
             <p>Your cart is empty.</p>
             <Link to="/shop">Continue Shopping</Link>
         </main>

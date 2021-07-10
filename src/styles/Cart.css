@@ -1,0 +1,43 @@
+main.cart {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.cart p {
+    margin: 0;
+}
+
+.cart ul {
+    margin: 0;
+    padding: 0 15vw;
+}
+
+.cart ul li {
+    display: grid;
+    grid-template-columns: 1fr 6fr 6fr 2fr 1fr 6fr;
+    padding: 1rem;
+}
+
+.price {
+    text-align: right;
+}
+
+.total-bar {
+    margin: 4vh 0 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.clear-cart {
+    justify-self: center;
+}
+
+.checkout {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.cart a {
+    display: block;
+    margin-top: 4vh;
+}

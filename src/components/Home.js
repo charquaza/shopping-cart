@@ -1,6 +1,8 @@
+import "../styles/Home.css";
+
 function Home() {
     return (
-        <main>
+        <main className="home">
             <p>Welcome! This is a specialized shop that sells only Poké Balls.</p>
         </main>
     );

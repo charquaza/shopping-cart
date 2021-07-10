@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
-import './App.css';
+import './styles/App.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
