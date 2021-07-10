@@ -1,6 +1,19 @@
-function Shop() {
+import Item from "./Item";
+import template from "../template";
+
+function Shop(props) {
     return (
-        <h1>Hi from Shop</h1>
+        <main>
+            <ul>
+                {template.map((item) => {
+                    return (
+                        <li key={item.name}>
+                            <Item template={item} addToCart={props.updateCart} />
+                        </li>
+                    );
+                })}
+            </ul>
+        </main>
     );
 }
 

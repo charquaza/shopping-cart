@@ -1,6 +1,8 @@
 function Home() {
     return (
-        <h1>Home</h1>
+        <main>
+            <p>Welcome! This is a specialized shop that sells only Poké Balls.</p>
+        </main>
     );
 }
 
