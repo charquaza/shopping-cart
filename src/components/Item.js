@@ -1,7 +1,7 @@
 function Item(props) {
-    var template = props.template;
+    var itemData = props.itemData;
 
-    var isNotNumber = !props.template.price.startsWith("$");
+    var isNotAvailable = !props.itemData.price.startsWith("$");
 
     function decrement(e) {
         var itemName = e.target.getAttribute("data-name");
@@ -25,26 +25,26 @@ function Item(props) {
 
     return (
         <>
-            <img src={template.src} alt={template.name} />
-            <h2>{template.name}</h2>
-            <p>{template.description}</p>
-            <p>{template.price}</p>
+            <img src={itemData.src} alt={itemData.name} />
+            <h2>{itemData.name}</h2>
+            <p>{itemData.description}</p>
+            <p>{itemData.price}</p>
             <button 
-                onClick={decrement} data-name={template.name} 
-                disabled={isNotNumber}
+                onClick={decrement} data-name={itemData.name} 
+                disabled={isNotAvailable}
             >-</button>
             <input 
                 type="number" min="0" max="99" 
-                disabled={isNotNumber} id={template.name} 
+                disabled={isNotAvailable} id={itemData.name} 
                 defaultValue="0" 
             />
             <button 
-                onClick={increment} data-name={template.name} 
-                disabled={isNotNumber}
+                onClick={increment} data-name={itemData.name} 
+                disabled={isNotAvailable}
             >+</button>
             <button 
-                onClick={props.addToCart} disabled={isNotNumber} 
-                data-name={template.name} data-price={template.price}
+                onClick={props.addToCart} disabled={isNotAvailable} 
+                data-name={itemData.name} data-price={itemData.price}
             >Add to Cart</button>
         </>
     );

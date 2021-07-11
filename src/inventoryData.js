@@ -4,7 +4,7 @@ import image3 from "./images/3-ultra-ball.png";
 import image4 from "./images/4-master-ball.png";
 import image5 from "./images/5-premier-ball.png";
 
-var template = [
+var inventoryData = [
     {
         src: image1, 
         name: "Poké Ball", 
@@ -37,4 +37,4 @@ var template = [
     },
 ];
 
-export default template;
+export default inventoryData;
